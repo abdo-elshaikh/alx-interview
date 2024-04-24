@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+""" modul"""
+
+
 def pascal_triangle(n):
+    """
+    pascal"""
     if n <= 0:
         return []
 
