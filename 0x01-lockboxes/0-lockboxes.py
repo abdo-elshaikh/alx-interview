@@ -8,7 +8,7 @@ def canUnlockAll(boxes):
     """
     keys = [0]
     n = len(boxes)
-    
+
     for i in range(0, n - 1):
         for j in boxes[i]:
             if j not in keys:
