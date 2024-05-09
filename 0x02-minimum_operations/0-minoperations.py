@@ -3,19 +3,21 @@
 
 
 def minOperations(n):
-    """return impossible to achieve """
+    """
+    Calculate the fewest number of operations needed to result 
+    in exactly n H characters in the file.
+
+    :param n: int - the desired number of H characters
+    :return: int - the minimum number of operations required
+    """
     if n <= 1:
-        return n
-
+        return 0
     operations = 0
-    clipboard = 1
-    buffer = 0
-
-    while clipboard < n:
-        if n % clipboard == 0:
-            buffer = clipboard
+    while n > 1:
+        if n % 2 == 0:
+            n = n / 2
             operations += 1
-        clipboard += buffer
-        operations += 1
-
-    return operations
+        else:
+            n -= 1
+            operations += 1
+    return int(operations)
